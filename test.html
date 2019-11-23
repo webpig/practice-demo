@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        /*最外层容器样式*/
+        .wrap {
+            width: 200px;
+            height: 200px;
+            margin: 200px;
+            position: relative;
+        }
+
+        /*包裹所有容器样式*/
+        .cube {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            /* 为了方便观察，将整个魔方进行旋转 */
+            transform: rotateX(-30deg) rotateY(-80deg);
+        }
+
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.8;
+            transition: .4s;
+        }
+
+        /*定义所有图片样式*/
+        .pic {
+            width: 200px;
+            height: 200px;
+        }
+
+        .cube .out_front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .cube .out_back {
+            transform: translateZ(-100px) rotateY(180deg);
+        }
+
+        .cube .out_left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .cube .out_right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .cube .out_top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .cube .out_bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        /*鼠标移入后样式*/
+        .cube:hover .out_front {
+            transform: rotateY(0deg) translateZ(200px);
+        }
+
+        .cube:hover .out_back {
+            transform: translateZ(-200px) rotateY(180deg);
+        }
+
+        .cube:hover .out_left {
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+
+        .cube:hover .out_right {
+            transform: rotateY(90deg) translateZ(200px);
+        }
+
+        .cube:hover .out_top {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+
+        .cube:hover .out_bottom {
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <!--外层最大容器-->
+    <div class="wrap">
+        <!--包裹所有元素的容器-->
+        <div class="cube">
+            <!--前面图片 -->
+            <div class="out_front">
+                <img src="http://img.blog.csdn.net/20170716094246620" class="pic" />
+            </div>
+            <!--后面图片 -->
+            <div class="out_back">
+                <img src="http://img.blog.csdn.net/20170716094334594" class="pic" />
+            </div>
+            <!--左面图片 -->
+            <div class="out_left">
+                <img src="http://img.blog.csdn.net/20170716094400013" class="pic" />
+            </div>
+            <!--右面图片 -->
+            <div class="out_right">
+                <img src="http://img.blog.csdn.net/20170716094422331" class="pic" />
+            </div>
+            <!--上面图片 -->
+            <div class="out_top">
+                <img src="http://img.blog.csdn.net/20170716094444434" class="pic" />
+            </div>
+            <!--下面图片 -->
+            <div class="out_bottom">
+                <img src="http://img.blog.csdn.net/20170716094504432" class="pic" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

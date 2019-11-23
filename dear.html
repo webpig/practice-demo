@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dear</title>
+    <style>
+        html, body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        /* .wrapper {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        } */
+        .cube { 
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(-80deg);
+            animation: rotate linear 20s infinite;
+        }
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            /* opacity: 0.8; */
+            transition: all .4s;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotateX(0) rotateY(0);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        .out-front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        .out-back {
+            transform: translateZ(-100px) rotateY(180deg);
+        }
+        .out-left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .out-right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .out-top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .out-bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .cube span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .small-img {
+            width: 100px;
+            height: 100px;
+        }
+        .in-front {
+            transform: rotateY(0deg) translateZ(50px);
+        }
+        .in-back {
+            transform: translateZ(-50px) rotateY(180deg);
+        }
+        .in-left {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        .in-right {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .in-top {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .in-bottom {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+        .cube:hover .out-front {
+            transform: rotateY(0deg) translateZ(200px);
+        }
+        .cube:hover .out-back {
+            transform: translateZ(-200px) rotateY(180deg);
+        }
+        .cube:hover .out-left {
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+        .cube:hover .out-right {
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        .cube:hover .out-top {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+        .cube:hover .out-bottom {
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <audio id="audio" style="width:300px;height:60px;position: fixed;left: 0;top: 0;" controls="controls" autoplay="autoplay" loop="loop" src="http://antiserver.kuwo.cn/anti.s?format=mp3|aac&amp;rid=1704879&amp;type=convert_url&amp;response=res" type="audio/mpeg" controlslist="nodownload" oncontextmenu="return false;"></audio>
+        <div class="cube">
+            <div class="out-front">
+                <img src="http://b244.photo.store.qq.com/psb?/V11ncJy83bBMRI/HHW5D5h7MaWaxuVH55MkH7w6bm1oByauXdIVMjskPkc!/b/dPQAAAAAAAAA&bo=qwblCKsG5QgRNwA!&rf=viewer_4" alt="">
+            </div>
+            <div class="out-back">
+                <img src="http://b244.photo.store.qq.com/psb?/V11ncJy83bBMRI/QboBsRB6QmktwwkNoyqKy0xTCr9IplPdgyNQNRDNhM4!/b/dPQAAAAAAAAA&bo=qwblCKsG5QgRJxA!&rf=viewer_4" alt="">
+            </div>
+            <div class="out-left">
+                <img src="http://b222.photo.store.qq.com/psb?/V11ncJy83bBMRI/TSnPhQE1tAA6efQHcYO4BbhrnrkRvCdDgcIWV7582ko!/b/dN4AAAAAAAAA&bo=sQblCLEG5QgRJxA!&rf=viewer_4" alt="">
+            </div>
+            <div class="out-right">
+                <img src="http://b393.photo.store.qq.com/psb?/V11ncJy83bBMRI/PElowFLG0ZSI0agDL2WwUsN32FLcwHGUQIbWmsKBelw!/b/dIkBAAAAAAAA&bo=5QirBuUIqwYRR3A!&rf=viewer_4" alt="">
+            </div>
+            <div class="out-top">
+                <img src="http://b364.photo.store.qq.com/psb?/V11ncJy83bBMRI/fa2o4MkzVhCrl3SX.eGI4pjYLrG5JBYmaTHbdix1qYY!/b/dGwBAAAAAAAA&bo=5QirBuUIqwYRJxA!&rf=viewer_4" alt="">
+            </div>
+            <div class="out-bottom">
+                <img src="http://b389.photo.store.qq.com/psb?/V11ncJy83bBMRI/ki5W0t730h9Zaso8bdAmWy4DJnxcTZK60flBXTwLvHs!/b/dIUBAAAAAAAA&bo=5QirBuUIqwYRNwA!&rf=viewer_4" alt="">
+            </div>
+
+            <span class="in-front">
+                <img class="small-img" src="http://b244.photo.store.qq.com/psb?/V11ncJy83bBMRI/HHW5D5h7MaWaxuVH55MkH7w6bm1oByauXdIVMjskPkc!/b/dPQAAAAAAAAA&bo=qwblCKsG5QgRNwA!&rf=viewer_4" alt="">
+            </span>
+            <span class="in-back">
+                <img class="small-img" src="http://b244.photo.store.qq.com/psb?/V11ncJy83bBMRI/QboBsRB6QmktwwkNoyqKy0xTCr9IplPdgyNQNRDNhM4!/b/dPQAAAAAAAAA&bo=qwblCKsG5QgRJxA!&rf=viewer_4" alt="">
+            </span>
+            <span class="in-left">
+                <img class="small-img" src="http://b222.photo.store.qq.com/psb?/V11ncJy83bBMRI/TSnPhQE1tAA6efQHcYO4BbhrnrkRvCdDgcIWV7582ko!/b/dN4AAAAAAAAA&bo=sQblCLEG5QgRJxA!&rf=viewer_4" alt="">
+            </span>
+            <span class="in-right">
+                <img class="small-img" src="http://b393.photo.store.qq.com/psb?/V11ncJy83bBMRI/PElowFLG0ZSI0agDL2WwUsN32FLcwHGUQIbWmsKBelw!/b/dIkBAAAAAAAA&bo=5QirBuUIqwYRR3A!&rf=viewer_4" alt="">
+            </span>
+            <span class="in-top">
+                <img class="small-img" src="http://b364.photo.store.qq.com/psb?/V11ncJy83bBMRI/fa2o4MkzVhCrl3SX.eGI4pjYLrG5JBYmaTHbdix1qYY!/b/dGwBAAAAAAAA&bo=5QirBuUIqwYRJxA!&rf=viewer_4" alt="">
+            </span>
+            <span class="in-bottom">
+                <img class="small-img" src="http://b389.photo.store.qq.com/psb?/V11ncJy83bBMRI/ki5W0t730h9Zaso8bdAmWy4DJnxcTZK60flBXTwLvHs!/b/dIUBAAAAAAAA&bo=5QirBuUIqwYRNwA!&rf=viewer_4" alt="">
+            </span>
+        </div>
+    </div>
+</body>
+</html>
